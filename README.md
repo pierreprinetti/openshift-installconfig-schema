@@ -2,6 +2,8 @@
 
 This repository contains an unofficial JSON validator for OpenShift's `install-config.yaml` configuration file.
 
+**This branch targets OpenShift v4.16.**
+
 To use in your editor:
 * Install [yaml-language-server](https://github.com/redhat-developer/yaml-language-server)
 * Add the schema hint at the top of the file:

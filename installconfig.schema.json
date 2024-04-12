@@ -1,5 +1,5 @@
 {
-  "$id": "https://raw.githubusercontent.com/pierreprinetti/openshift-installconfig-schema/master/installconfig.schema.json",
+  "$id": "https://raw.githubusercontent.com/pierreprinetti/openshift-installconfig-schema/release-4.16/installconfig.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "definitions": {
