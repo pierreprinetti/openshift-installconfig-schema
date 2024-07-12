@@ -92,6 +92,7 @@
           "type": "string"
         },
         "apiVIP": {
+          "deprecated": true,
           "description": "An IP address on the machineNetwork that will be assigned to the API VIP. Be aware that the 10 and 11 of the machineNetwork will be taken by neutron dhcp by default, and won't be available.",
           "oneOf": [
             {
@@ -102,6 +103,22 @@
             }
           ],
           "type": "string"
+        },
+        "apiVIPs": {
+          "description": "IP address on the machineNetwork that will be assigned to the API VIP. If more than one are set, it must be one IPv4 and one IPv6. Note that the `10` and `11` of the machineNetwork are reserverd for Neutron for DHCP by default",
+          "items": {
+            "oneOf": [
+              {
+                "format": "ipv4"
+              },
+              {
+                "format": "ipv6"
+              }
+            ],
+            "type": "string"
+          },
+          "maxItems": 2,
+          "type": "array"
         },
         "cloud": {
           "description": "The name of the OpenStack cloud to use from clouds.yaml.",
@@ -197,6 +214,35 @@
             }
           ],
           "type": "string"
+        },
+        "ingressVIP": {
+          "deprecated": true,
+          "description": "An IP address on the machineNetwork that will be assigned to the Ingress VIP. Be aware that the 10 and 11 of the machineNetwork will be taken by neutron dhcp by default, and won't be available.",
+          "oneOf": [
+            {
+              "format": "ipv4"
+            },
+            {
+              "format": "ipv6"
+            }
+          ],
+          "type": "string"
+        },
+        "ingressVIPs": {
+          "description": "IP address on the machineNetwork that will be assigned to the ingress VIP. If more than one are set, it must be one IPv4 and one IPv6. Note that the `10` and `11` of the machineNetwork are reserverd by Neutron for DHCP by default.",
+          "items": {
+            "oneOf": [
+              {
+                "format": "ipv4"
+              },
+              {
+                "format": "ipv6"
+              }
+            ],
+            "type": "string"
+          },
+          "maxItems": 2,
+          "type": "array"
         },
         "octaviaSupport": {
           "deprecated": true,
